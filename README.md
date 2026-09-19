@@ -25,15 +25,24 @@ Every 60 seconds, without any human intervention or multisig delays, Jev perform
 
 ## Running Locally
 
+To run the Jevons Agent locally, you will need to provide your own API keys for the AI integration. OpenRouter API (for LLM reasoning) and FAL AI API (for image generation) are used. 
+
 1. Install dependencies:
    ```bash
    npm install
    ```
-2. Start the dev server:
+2. Create a `.env` file in the root directory and add your API keys:
+   ```env
+   VITE_OPENROUTER_API_KEY=your_key_here
+   VITE_FAL_API_KEY=your_key_here
+   ```
+3. Start the dev server:
    ```bash
    npm run dev
    ```
-3. Open your browser and type `track Jevons` into the terminal UI to kick off the autonomous buyback cycle!
+4. Open your browser and type `track Jevons` into the terminal UI to kick off the autonomous buyback cycle!
+
+![Jev Agent Terminal UI](terminal.png)
 
 ## License
 MIT
